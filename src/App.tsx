@@ -6,6 +6,7 @@ import {Navigate, Route, Routes} from "react-router-dom";
 import {ButtonLink} from "./components/pages/ButtonLink";
 import {Model} from "./components/pages/Model";
 import {PATH, sneakersArr} from "./DateCatalog/Catalog";
+import {Prices} from "./components/pages/Prices";
 
 function App() {
     return (
@@ -16,6 +17,7 @@ function App() {
                     <ButtonLink address={PATH.PAGE1} firm={PATH.PAGE1.toUpperCase()}/>
                     <ButtonLink address={PATH.PAGE2} firm={PATH.PAGE2.toUpperCase()}/>
                     <ButtonLink address={PATH.PAGE3} firm={PATH.PAGE3.toUpperCase()}/>
+                    <ButtonLink address={PATH.PRICES} firm={PATH.PRICES.toUpperCase()}/>
                 </div>
                 <div className={styles.content}>
                     <Routes>
@@ -26,7 +28,8 @@ function App() {
                         <Route path={PATH.PAGE1} element={<Sneakers catalog={sneakersArr[PATH.PAGE1]} item={PATH.PAGE1.toUpperCase()}/>}/>
                         <Route path={PATH.PAGE2} element={<Sneakers catalog={sneakersArr[PATH.PAGE2]} item={PATH.PAGE2.toUpperCase()}/>}/>
                         <Route path={PATH.PAGE3} element={<Sneakers catalog={sneakersArr[PATH.PAGE3]} item={PATH.PAGE3.toUpperCase()}/>}/>
-                        {/*можно так, но остаётсЯ виден неправильный адрес*/}
+                        <Route path={PATH.PRICES} element={<Prices/>}/>
+                        {/*можно так, но остаётся виден неправильный адрес*/}
                         <Route path="*" element={<Error404 />}/>
                         {/*так неправильный адрес затирается на 'error404'*/}
                         {/*<Route path={PATH.ERROR} element={<Error404 />}/> 

@@ -1,7 +1,7 @@
 import React from 'react';
 import {useParams} from "react-router-dom";
 import styles from '../../components/Site.module.css'
-import {PATH, sneakersArr} from "../../DateCatalog/Catalog";
+import {sneakersArr} from "../../DateCatalog/Catalog";
 
 type PropsType = {
     firm: string

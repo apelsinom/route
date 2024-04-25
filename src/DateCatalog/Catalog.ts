@@ -14,7 +14,8 @@ export const PATH = {
     PAGE1: 'adidas',
     PAGE2: 'puma',
     PAGE3: 'abibas',
-    ERROR: 'error404'
+    ERROR: 'error404',
+    PRICES: 'prices',
 } as const
 
 export type ModelType = {
